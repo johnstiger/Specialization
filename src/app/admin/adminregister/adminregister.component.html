@@ -1,0 +1,69 @@
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg p-3 mb-0 rounded rounded" style="background-color: #364ed9;">
+    <div class="container">
+        <a class="navbar-brand border p-3 mb-2 bg-white text-dark" routerLink="/"><img src="../../assets/images/logo.png" height="40px" width="100%"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ml-auto">
+                <!-- <li class="nav-item active"><a class="nav-link" routerLink="/client/login"> Log In </a></li> -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/client/register">Sign Up</a>
+                </li>
+                <li class="nav-item active dropdown active">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Log In
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/client/login">As a User</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" routerLink="/admin/login">As an Admin</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="bg-img">
+    <div class="container d-flex flex-column min-vh-100">
+        <div class="row flex-grow-1 justify-content-center align-items-center">
+            <div class="col-5">
+                <div class="card laban">
+                    <div class="card-header">
+                        <div class="text white text-center txt">Admin Registration Form</div>
+                    </div>
+                    <!-- <img src="../../assets/images/image2.jpg"> -->
+                    <div class="card-body">
+                        <form name="form" [formGroup]="form" (ngSubmit)="form.valid && register()">
+                            <div class="form-group ">
+                                <label for="name">User Name</label>
+                                <input type="text" class="form-control" formControlName="name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}" required>
+                                <div class="invalid-feedback">
+                                    <div>username is required</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email_address">Email Address</label>
+                                <input type="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}">
+                                <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+                                    <div *ngIf="form.get('email').errors.required">Email Name is required</div>
+                                    <div *ngIf="form.get('email').errors.email">Email must be a valid email Address</div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':form.get('password').touched && form.get('password').invalid}" />
+                                <div *ngIf="form.get('password').touched && form.get('password').invalid" class="invalid-feedback">
+                                    <div *ngIf="form.get('password').errors.required">Password is required</div>
+                                    <div *ngIf="form.get('password').errors.minlength">Password must be a least 8 character</div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary" [disabled]="!form.valid">Sign Up</button>
+                            <p>Create New Account? <a href="" routerLink="/admin/login">click here</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

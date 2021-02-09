@@ -1,0 +1,70 @@
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg mb-0 rounded rounded" style="background-color: #364ed9;height: 70px;">
+    <div class="container-fluid ">
+        <a class="navbar-brand border  mb-2 mt-2 bg-white text-dark" routerLink="/"><img src="../../assets/images/logo.png" height="45px" width="auto"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ml-auto">
+                <p class="nav-item">
+                    <a class="nav-link" routerLink="/client/register">Sign Up</a>
+                </p>
+                <li class="nav-item dropdown active mr-5">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Log In
+          </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/client/login">As a User</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" routerLink="/admin/login">As an Admin</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="bg-img">
+    <div class="container d-flex flex-column vh-100">
+        <div class="row flex-grow-1 justify-content-center align-items-center">
+            <div class="col-5">
+                <div class="card laban">
+                    <div class="card-header">
+                        <div class="card-header py-4">
+                            <div class="text white text-center txt">Admin Login Form</div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border" role="status" style="display: none;" id="spinner">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form name="form" [formGroup]="form" (ngSubmit)="form.valid && login()">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" placeholder="e.g sample@gmail.com" formControlName="email" [ngClass]="{'is-invalid':form.get('email').touched && form.get('email').invalid}" />
+                                <div class="mt-5" *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+                                    <div *ngIf="form.get('email').errors.required">Email Name is required</div>
+                                    <div *ngIf="form.get('email').errors.email">Email must be a valid email Address
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control text-center" placeholder="********" type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid':form.get('password').touched && form.get('password').invalid}" />
+                                <div *ngIf="form.get('password').touched && form.get('password').invalid" class="invalid-feedback">
+                                    <div *ngIf="form.get('password').errors.required">Password is required</div>
+                                    <div *ngIf="form.get('password').errors.minlength">Password must be a least 8 character
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary" [disabled]="!form.valid">Log
+                                  In</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

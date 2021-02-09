@@ -1,0 +1,56 @@
+.bg-img {
+    background-image: url('../../../assets/images/image2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/images/image2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    max-height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.form-control:focus {
+    border-radius: 0;
+    background-color: transparent;
+    color: black;
+    font-family: 'Courgette';
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+}
+
+.form-control:focus {
+    border: rgb(8, 7, 8) solid 2px;
+    border: rgba(8, 7, 8, 0.5) solid 1px;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: rgb(8, 7, 8);
+    font-size: 12;
+    font-weight: 100;
+    color: gray;
+    font-style: italic;
+}
+
+.txt {
+    animation: glitch .90s linear infinite;
+    font-size: 20px;
+    color: black;
+}
+
+.input-icon {
+    font-size: 14px;
+}
+
+.card-footer {
+    background-color: transparent;
+    border: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.laban {
+    padding: 10px;
+    box-shadow: 5px 5px 5px dimgray;
+}

@@ -1,0 +1,52 @@
+<div class="container p-3 shadow p-3 mb-5 rounded" id="form">
+    <p class=" h2 text-center font-weight-italic ">Update User</p>
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border" role="status" style="display: none;" id="spinner">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <form name="form" #FormUpdate="ngForm" (ngSubmit)="submit(FormUpdate.value)">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="bus_name">First Name</label>
+                <input type="text" class="form-control" name="firstname" [ngModel]="firstname">
+            </div>
+            <div class="form-group col-md-6">
+                <label for=" description">Last Name</label>
+                <input type="text" class="form-control" name="lastname" [ngModel]="lastname">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="number_of_seat">Contact Number</label>
+                <input type="text" class="form-control" name="contact_number" [ngModel]="contact_number">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="img_url">Salary</label>
+                <input type="text" class="form-control" name="salary" [ngModel]="salary">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="price">Address</label>
+                <input type="text" class="form-control" name="address" [ngModel]="address">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="number_of_seat">License</label>
+                <input type="text" class="form-control" name="license" [ngModel]="license">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="img_url">Salary</label>
+                <input type="text" class="form-control" name="salary" [ngModel]="salary">
+            </div>
+        </div>
+        <div class="form-group ">
+            <button type="submit" class="btn btn-primary btn-sm ">
+     Update Driver
+    </button>
+            <button type="button" class="btn btn-danger btn-sm" routerLink="/admin/drivers">Cancel</button>
+        </div>
+    </form>
+</div>

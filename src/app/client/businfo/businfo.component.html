@@ -1,0 +1,12 @@
+<div class="shadow p-3 mb-5 bg-white rounded">
+    <img src="{{ bus.img_url }}" style="width:260px;height:200px;">
+    <h4 class="font-weight-bold">{{ bus.bus_name }}</h4>
+    <ul>
+        <li>Number of Seats: {{bus.number_of_seat}}</li>
+        <li>Price per Day: {{bus.price}}</li>
+        <li>Status: {{bus.status}}</li>
+        <li>Descriptions: {{bus.description}}</li>
+    </ul>
+    <button type="button" class="btn btn-primary" (click)="book(bus.id)" data-toggle="tooltip" data-placement="top" title="{{ bus.description }}">
+          BookNow </button>
+</div>

@@ -1,0 +1,35 @@
+<strong><h1>Drivers: </h1></strong>
+
+
+<button class="btn btn-primary mb-3 float-right mr-1" type="submit" (click)="add()">Add Driver</button>
+<div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status" style="display: none;" id="spinner">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<table class="table p-3">
+    <thead class="thead">
+        <tr>
+            <th scope="col">Full Name</th>
+            <th scope="col">Contact Number</th>
+            <th scope="col">License ID</th>
+            <th scope="col">Status</th>
+            <th scope="col">Salary</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <p id="loading" style="display: none;">Collecting Data, Please Wait.....</p>
+        <tr *ngFor="let driver of drivers">
+            <td>{{driver.firstname }} {{driver.lastname}}</td>
+            <td>{{driver.contact_number}}</td>
+            <td>{{driver.license}}</td>
+            <td>{{driver.status}}</td>
+            <td>{{driver.salary}}</td>
+            <td>
+                <button (click)=" update(driver)" class="btn btn-primary">Update</button>
+            </td>
+            <td><button (click)="alertConfirmation(driver.id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

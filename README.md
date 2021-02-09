@@ -1,2 +1,1 @@
-# Specialization
-angular x laravel
+# angular_specialization

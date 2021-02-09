@@ -1,0 +1,53 @@
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg p-3 mb-0 rounded rounded" style="background-color: #364ed9;">
+    <div class="container">
+        <a class="navbar-brand border border-light bg-light" routerLink="/landing-page"><img src="../../assets/images/logo.png" height="45px" width="auto" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/client/landing-page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/userhome">Buses</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/client/history">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/client/story">About</a>
+                </li>
+
+                <div class="dropdown">
+                    <button id="admn" class="float-left btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="color: white;" aria-haspopup="true" aria-expanded="false">User</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" (click)="logout()">Sign Out</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <table class=" table mt-2">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Bus Name</th>
+                <th scope="col">Start Date</th>
+                <th scope="col">End Date</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">Payment Method</th>
+                <!-- <th s></th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor = "let bus of buses">
+              <td>{{bus.bus_name}}</td>
+              <td>{{bus.payment}}</td>
+              <td>@mdo</td>
+            </tr> -->
+        </tbody>
+    </table>
+</div>
+<app-footer></app-footer>

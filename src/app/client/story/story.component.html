@@ -1,0 +1,63 @@
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg p-3 mb-0 rounded rounded" style="background-color: #364ed9;">
+    <div class="container">
+        <a class="navbar-brand border border-light bg-light" routerLink="/"><img src="../../assets/images/logo.png" height="45px" width="auto" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ml-auto">
+                <p class="nav-item">
+                    <a class="nav-link" routerLink="/client/landing-page">Home</a>
+                </p>
+                <p class="nav-item">
+                    <a class="nav-link" routerLink="/userhome">Buses</a>
+                </p>
+
+                <p class="nav-item active">
+                    <a class="nav-link" routerLink="/client/story">About</a>
+                </p>
+                <div class="dropdown">
+                    <button id="admn" class="float-left btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" style="color: white;" aria-haspopup="true" aria-expanded="false">User</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" (click)="logout()">Sign Out</a>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="title">
+    <div>
+        <p class="h1 story">Our Story</p>
+        <svg height="80" width="400">
+                    <g fill="none">
+                      <path stroke="white" stroke-width="6" d="M5 10 1200 0"/>
+                    </g>
+            </svg>
+        <p class="tag">Bus Rental and Ride Corporation</p>
+        <q>Enjoy the Ride with no Fear</q>
+    </div>
+</div>
+<div class="about">
+    <br>
+    <p>Organized on May 25, 1993, established to cater the automotive repair and maintenance for its sister company, Vehicle Transit Services Corporation and other outside client. On February 1, 2005, Bus Rental Service Center Corporation underwent corporate
+        reorganization and changed its primary business to bus rental, and just recently our corporate name BUS RENTAL & RIDE CORPORATION was adopted.</p>
+    <br>
+    <p>Now it operates Tourist Buses to the public and offers Tour Group, Corporate Shuttle, Educational Field Trips, Airport / Hotel Transfer and Pick-up & Drop-Off in any point of Visayas.</p>
+    <br>
+    <br>
+    <p>A member of the Philippine Association of Tourist Transport Operators (PATTO) accredited by the Department of Tourism (DOT), GMR MEGAWIDE Cebu Airport Corporation (GMCAC) and licensed by the Land Transportation Franchising & Regulatory Board (LTFRB)
+        both as Tourist Land Transport Operators and Shuttle Services.</p>
+    <br>
+    <p>More than Fifteen (15) Years experience in handling the Tourist Bus transportation requirements of various hotels such as: The Crown Regency Hotel, Waterfront Cebu Hotel and Resort, Radisson Blu Cebu, Hotel Jen Manila and Heritage Hotel, Companies
+        such as Philippine Foremost Milling Corporation, Asian Development Bank and Fujitsu Ten Philippines.</p>
+    <br>
+    <br>
+    <p>Operated by some of the most experienced and service oriented personnel in the transportation business namely: John Dave Pacinio as Chairman of the Board, Reina Mates as its President, Girly Coca as Vice President,Precy Jane Roxas as General Manager
+        and Jenie Joy Tomalon as Operation Supervisor for Tourist Bus.</p>
+    <br>
+    <p>
+        All drivers, maintenance personnel and staff undergo yearly medical and drug testing by a reputable DOH accredited industrial diagnostic center.</p>
+</div>
+<app-footer></app-footer>

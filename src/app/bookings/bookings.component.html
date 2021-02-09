@@ -1,0 +1,36 @@
+<div class="alert alert-success alert-dismissible fade show" role="alert" *ngIf="!hidden">
+    <strong>Successfully Deleted!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<!-- <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <hr>
+    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+  </div> -->
+
+
+
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Client Name</th>
+            <th scope="col">Bus type</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let booking of bookings">
+            <th scope="row">{{booking.id}}</th>
+            <td>{{booking.client_name}}</td>
+            <td>{{booking.bus_name}}</td>
+            <td><button class="btn btn-primary mr-3">Update</button>
+                <button class="btn btn-danger" (click)="deleteBooking(booking)">Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>

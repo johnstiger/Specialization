@@ -1,0 +1,25 @@
+<nav id="navbar_top" class="navbar navbar-expand-lg navbar-dark sticky-top shadow-lg shadow-lg mb-0 rounded rounded" style="background-color: #364ed9;height: 70px;">
+    <div class="container-fluid ">
+        <a class="navbar-brand border  mb-2 mt-2 bg-white text-dark" routerLink="/"><img src="../../assets/images/logo.png" height="45px" width="auto"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="main_nav">
+            <ul class="navbar-nav ml-auto">
+                <p class="nav-item">
+                    <a class="nav-link" routerLink="/client/register">Sign Up</a>
+                </p>
+                <li class="nav-item dropdown mr-5 ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Log In
+          </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" routerLink="/client/login">As a User</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" routerLink="/admin/login">As an Admin</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,59 @@
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="border-right" id="sidebar-wrapper" style="background-color: rgb(125, 110, 224);">
+        <br>
+        <div class="sidebar-heading"><img style="width: 100px; height: 100px; margin-left: 50px; border-radius: 50%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH4Ui8-aKNWj9bB8P5rLObzIRt30lQ-wpIOg&usqp=CAU" alt="">
+        </div>
+        <h3 style="text-align: center;">Admin</h3>
+        <p style="text-align: center;">admin@admin.com</p>
+        <hr>
+        <div class="list-group list-group-flush">
+            <!-- <span><i class="fas fa-tachometer-alt"></i> Dashboard</span> -->
+            <a class="list-group-item list-group-item-action bg-light" routerLink='/admin/user-profile'>
+                <i class="fas fa-users"></i> Clients</a>
+            <a class="list-group-item list-group-item-action bg-light" routerLink='/admin/bookings'>
+                <i class="fas fa-book-open"></i> Bookings</a>
+            <a class="list-group-item list-group-item-action bg-light" routerLink='/admin/drivers'>
+                <i class="fas fa-user-cog"></i> Drivers</a>
+            <a class="list-group-item list-group-item-action bg-light" routerLink='/admin/buses'>
+                <i class="fas fa-bus"></i> All Bus</a>
+        </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+        <nav class="navbar navbar-expand-lg navbar-secondary border-bottom" style="background-color: darkslateblue;">
+            <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-bars"></i></button>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Admin
+              </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" (click)="logout()">Log Out</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <br>
+            <br>
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->

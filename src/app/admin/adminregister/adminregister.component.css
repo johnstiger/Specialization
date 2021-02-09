@@ -1,0 +1,38 @@
+.bg-img {
+    background-image: url('../../../assets/images/image5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.laban {
+    background-color: rgba(235, 245, 251);
+    box-shadow: 5px 5px 5px lightslategrey;
+
+}
+
+.form-control,
+.form-control:focus {
+    border-radius: 0;
+    background-color: transparent;
+    color: black;
+    font-family: 'Courgette';
+}
+
+.form-control:focus {
+    border: rgb(8, 7, 8) solid 2px;
+    box-shadow: none;
+}
+
+.form-control::placeholder {
+    color: rgb(8, 7, 8);
+}
+
+.txt {
+    animation: glitch .90s linear infinite;
+    font-size: 20px;
+    color: black;
+}

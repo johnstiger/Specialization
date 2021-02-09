@@ -1,0 +1,41 @@
+.title {
+    background-image: url('../../../assets/images/story.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 75%;
+    min-height: 55%;
+}
+
+.story {
+    padding-left: 5%;
+    padding-top: 5%;
+    font-size: 5vw;
+    font-family: Georgia;
+    text-shadow: 2px 2px white;
+}
+
+.tag {
+    font-size: 4ex;
+    color: white;
+    font-family: Geneva;
+    padding-left: 15%;
+    margin-top: -2rem
+}
+
+.about p {
+    font-size: 3ex;
+}
+
+q {
+    font-size: 3ex;
+    color: white;
+    font-family: Geneva;
+    padding-left: 15%;
+    margin-top: -2rem
+}
+
+.about {
+    background-color: bisque;
+    padding: 10%
+}

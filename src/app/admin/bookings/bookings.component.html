@@ -1,0 +1,38 @@
+<div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status" style="display: none;" id="spinner">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<strong><h1>Bookings: </h1></strong>
+<div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status" style="display: none;" id="spinner">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<table class="table">
+    <thead class="thead">
+        <tr>
+            <th scope="col">Client Name</th>
+            <th scope="col">Bus Name</th>
+            <th scope="col">Start Date</th>
+            <th scope="col">End Date</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Payment</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <p id="loading" style="display: none;">Collecting data, please wait......</p>
+        <tr *ngFor="let booking of bookings">
+            <th scope="row">{{booking.client_name}}</th>
+            <td>{{booking.bus_name}}</td>
+            <td>{{booking.start_date}}</td>
+            <td>{{booking.end_date}}</td>
+            <td>{{booking.price}}</td>
+            <td>{{booking.payment}}</td>
+            <td>
+                <button (click)=" alertConfirmation(booking.id) " class="btn btn-danger " style="margin-left: 10px; ">Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>
